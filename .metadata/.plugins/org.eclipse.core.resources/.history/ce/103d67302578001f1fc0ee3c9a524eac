@@ -1,0 +1,24 @@
+package com.karthik.org.dbms;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+
+
+public class SpringDatabaseConnect {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext  context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		
+		JdbcCon jc = context.getBean(JdbcCon.class);
+		
+		jc.findAll();
+		
+		
+		((ConfigurableApplicationContext) context).close();
+		
+
+	}
+
+}

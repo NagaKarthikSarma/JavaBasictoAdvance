@@ -1,0 +1,30 @@
+spring:
+      application:
+        name : K_Sodium_Oauth    
+      mvc:
+        view: 
+           prefix: /WEB-INF/views/ 
+           suffix: .jsp
+      datasource: 
+        url: jdbc:mysql://localhost:3306/Periodic_table
+        username: root
+        password: D@ngereag1e 
+        dbcp2   :
+               driver-class-name: com.mysql.cj.jdbc.Driver
+                 
+      jpa:
+        hibernate: 
+               ddl-auto: update
+        show-sql: true   
+
+      security:
+               user:
+                    name: karthik  
+                    password: 12345  
+
+                    
+server: 
+       servlet: 
+                session:
+                        cookie: 
+                                same-site: strict

@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+ 
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!-- Use the MySQL 8 dialect for compatibility -->
+  <!-- mysql8dialect in Hibernate ensures that Hibernate can effectively communicate with and utilize the features of a MySQL 8 database.-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+     
+        <!-- Sample MySQL URL provided -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jdbc</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"> D@ngereag1e </property>
+           <property name="hbm2ddl.auto">update</property>
+           
+        <!-- Show SQL on console -->
+        <property name="hibernate.show_sql">true</property>
+ 
+        <!-- Setting Session context model -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+    </session-factory>
+</hibernate-configuration>

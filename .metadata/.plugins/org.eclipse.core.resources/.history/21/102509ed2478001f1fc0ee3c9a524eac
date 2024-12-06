@@ -1,0 +1,42 @@
+package com.karthik.org.dbms;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.RowMapper;
+
+import com.karthik.org.dbms.model.LumenComp;
+
+
+public class SpringDatabaseConnect {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext  context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		
+		public List<LumenComp> findAll() {
+			String sql = "select * from lumencomp;";
+			RowMapper<LumenComp>  map = new RowMapper<LumenComp>() {
+
+				@Override
+				public LumenComp mapRow(ResultSet rs, int rowNum) throws SQLException {
+					LumenComp lc = new LumenComp();
+					lc.setEid(rs.getInt("eid"));
+					lc.setEname(rs.getString("ename"));
+					lc.setExp(rs.getInt("exp"));
+					
+					
+					return lc;
+				}
+				
+			};
+			
+			return jdbc.query(sql,map);
+		}
+		
+
+	}
+
+}

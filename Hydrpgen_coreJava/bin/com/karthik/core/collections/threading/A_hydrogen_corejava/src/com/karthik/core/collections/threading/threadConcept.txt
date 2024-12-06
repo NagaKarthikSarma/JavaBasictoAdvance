@@ -1,0 +1,86 @@
+Thread Concepts:
+DeadLock
+Interrupt()
+notify() 
+notifyall()
+join()
+
+
+Executor service:
+          ExecutorService executor = Executors.newFixedThreadPool(3) 
+          Thread t1= new Thread();
+          executor.execute(t1);
+          
+          
+          executor.shutdown();
+          
+ 
+ CountDownLatch:
+ class A{
+   public countDownLatch 
+   
+   public classname(CountDownLatch latch){
+   this.latch =latch;
+   }
+   public void run(){
+   latch.countdown();
+   }
+   public static void main(String[] args){
+   
+   countDownLatch latch = new CountDownLatch(5);
+    Thread t1= new Thread(latch);
+   
+   to stop main method:
+   latch.await();
+   
+   
+   Writing to a file 
+   
+   try(BufferedWriter bw = new BW(new FileWriter(filepath,true)){
+   bw.write("karthik");
+   bw.newLine();
+   bw,close();
+   } catch(Exce  e){ }
+   
+   
+   Reading a file
+   
+   try(BufferedReader br = new BR(new FileReader(directory)){
+   string line ;
+   while((line=br.readLine) !=null){
+   System.out.println(line);
+   }
+   br.close();
+   
+   }
+   
+   serilization:
+   Transfer object in a network or to store in a database or to store in a file
+   
+   object --> bytestream
+   
+   deserilzation :
+   
+   byteStream --> object
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

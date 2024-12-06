@@ -1,0 +1,45 @@
+package com.karthik.org.dbms;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+
+import com.karthik.org.dbms.model.LumenComp;
+
+@Component
+public class JdbcCon {
+
+	
+	private JdbcTemplate jdbc;
+
+	public JdbcTemplate getJdbc() {
+		return jdbc;
+	}
+@Autowired
+	public void setJdbc(JdbcTemplate jdbc) {  
+		this.jdbc = jdbc;
+	}
+
+public List<LumenComp> findAll() {
+	String sql = "select * from Student;";
+	RowMapper<LumenComp>  map = new RowMapper<LumenComp>() {
+
+		@Override
+		public LumenComp mapRow(ResultSet rs, int rowNum) throws SQLException {
+			
+			return null;
+		}
+		
+	};
+	
+	return null;
+}
+
+}

@@ -1,0 +1,5 @@
+package com.karthik.org.dbms;
+@cofiguration
+public class ApplicationConfig2 {
+
+}

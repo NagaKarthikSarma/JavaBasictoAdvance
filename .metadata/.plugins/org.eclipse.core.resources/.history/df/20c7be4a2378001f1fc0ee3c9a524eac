@@ -1,0 +1,42 @@
+package com.karthik.org.dbms;
+
+import java.util.List;
+
+import javax.swing.tree.RowMapper;
+import javax.swing.tree.TreePath;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+import com.karthik.org.dbms.model.LumenComp;
+
+@Component
+public class JdbcCon {
+
+	
+	private JdbcTemplate jdbc;
+
+	public JdbcTemplate getJdbc() {
+		return jdbc;
+	}
+@Autowired
+	public void setJdbc(JdbcTemplate jdbc) {  
+		this.jdbc = jdbc;
+	}
+
+public List<LumenComp> findAll() {
+	String sql = "select * from Student;";
+	RowMapper  map = new RowMapper() {
+		
+		@Override
+		public int[] getRowsForPaths(TreePath[] path) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}; 
+	
+	return null;
+}
+
+}

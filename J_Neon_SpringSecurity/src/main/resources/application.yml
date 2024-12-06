@@ -1,0 +1,39 @@
+spring:
+      application:
+        name : J_Neon_SpringSecurity     
+      mvc:
+        view:
+           prefix: /WEB-INF/views/ 
+           suffix: .jsp
+      datasource: 
+        url: jdbc:mysql://localhost:3306/Periodic_table
+        username: root
+        password: D@ngereag1e 
+        dbcp2   :
+               driver-class-name: com.mysql.cj.jdbc.Driver
+                 
+      jpa:
+        hibernate: 
+               ddl-auto: update
+        show-sql: true   
+#      security:
+#               user:
+#                    name: karthik  
+#                    password: 12345  
+      security:
+               user:
+                    name: karthik  
+                    password: 12345  
+               oauth2: 
+                      client:
+                             registration: 
+                                          google: 
+                                                 client-id: 601388846894-5bqjd4et9ddf2bnn8f34sic7o7tfmvk4.apps.googleusercontent.com 
+                                                 client-secret: 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
+                      
+                    
+server: 
+       servlet: 
+                session:
+                        cookie: 
+                                same-site: strict
